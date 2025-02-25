@@ -1,47 +1,301 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  /* Light grey background */
+  color: #444;
+  /* Dark grey text */
+}
+
+header {
+  background: url('assets/jux.jpg') no-repeat center center/cover;
+  /* Image as header background */
+  color: white;
+  padding-top: 120px;
+  /* Increased padding to show more of the background image */
+  min-height: 400px;
+  /* Increased min-height to accommodate background image */
+  border-bottom: #FFD700 5px solid;
+  /* Yellow border to match image letters */
+  text-shadow: 2px 2px 4px #000000;
+  /* Text shadow for better readability on image */
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header nav {
+  float: right;
+  margin-top: 20px;
+  /* Adjusted margin */
+}
+
+header li {
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #marca {
+  float: left;
+}
+
+header #marca h1 {
+  margin: 0;
+}
+
+.contenedor {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
+  /* Added padding to contenedor */
+}
+
+#mostrar-caso {
+  /* Removed background image from mostrar-caso as it's now in header */
+  min-height: 200px;
+  /* Adjusted min-height */
+  text-align: center;
+  color: #000;
+  /* White text for better contrast */
+  padding: 50px 20px;
+  /* Added padding */
+}
+
+#mostrar-caso h1 {
+  margin-top: 20px;
+  /* Adjusted margin */
+  font-size: 45px;
+  /* Adjusted font size */
+  margin-bottom: 15px;
+}
+
+#mostrar-caso p {
+  font-size: 18px;
+  /* Adjusted font size */
+}
+
+#cajas {
+  margin-top: 30px;
+  /* Adjusted margin */
   display: flex;
+  /* Use flexbox for cajas */
+  justify-content: space-around;
+  /* Distribute cajas evenly */
+  flex-wrap: wrap;
+  /* Allow cajas to wrap on smaller screens */
+}
+
+#cajas .caja {
+  text-align: center;
+  width: 30%;
+  /* Adjusted width for cajas */
+  padding: 20px;
+  background-color: #fff;
+  /* White background for cajas */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for cajas */
+  margin-bottom: 20px;
+  /* Spacing between cajas */
+}
+
+#cajas .caja img {
+  width: 80px;
+  /* Adjusted icon size */
+  margin-bottom: 15px;
+}
+
+footer {
+  padding: 30px;
+  margin-top: 30px;
+  color: white;
+  background-color: #7B68EE;
+  /* Indigo footer color, matching image tones */
+  text-align: center;
+}
+
+/* Estilos para secciones específicas */
+.seccion {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.seccion h2 {
+  font-size: 2.5em;
+  /* Adjusted section title size */
+  margin-bottom: 20px;
+  color: #E91E63;
+  /* Pink section title color, matching image letters */
+}
+
+.seccion p {
+  line-height: 1.7em;
+  color: #555;
+  /* Darker grey for section text */
+  padding: 0 5%;
+  /* Added padding for section text */
+}
+
+/* Galería */
+#galeria {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-top: 20px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#galeria img {
+  width: 320px;
+  /* Adjusted gallery image size */
+  height: auto;
+  margin: 15px;
+  border-radius: 10px;
+  /* More rounded corners for gallery images */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  /* Increased shadow for gallery images */
+  transition: transform 0.3s ease;
+  /* Smooth transform on hover */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+#galeria img:hover {
+  transform: scale(1.05);
+  /* Slight scale up on hover */
+}
+
+
+/* Eventos */
+#eventos ul {
+  list-style: none;
+  padding: 0;
+}
+
+#eventos li {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  /* Adjusted shadow for events */
+}
+
+#eventos li h3 {
+  margin-top: 0;
+  color: #2E8B57;
+  /* Sea Green event title color, matching image letters */
+}
+
+#eventos li p {
+  color: #666;
+}
+
+/* Contacto */
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  /* Adjusted contact form width */
+  margin: auto;
+  margin-top: 30px;
+}
+
+#contacto input,
+#contacto textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  /* Light grey border for form inputs */
+  border-radius: 6px;
+  /* Rounded corners for form inputs */
+  font-size: 16px;
+}
+
+#contacto button {
+  background-color: #FFA07A;
+  /* Light Salmon button color, matching image letters */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  /* Smooth background color transition */
+}
+
+#contacto button:hover {
+  background-color: #FA8072;
+  /* Slightly darker Salmon on hover */
+}
+
+
+/* Diseño Responsive */
+@media(max-width: 768px) {
+  header {
+    padding-top: 80px;
+    /* Adjusted header padding for smaller screens */
+    min-height: 300px;
+    /* Adjusted header min-height for smaller screens */
   }
-  a:hover {
-    color: #747bff;
+
+  header #marca,
+  header nav,
+  header nav li {
+    float: none;
+    text-align: center;
   }
-  button {
-    background-color: #f9f9f9;
+
+  header nav {
+    margin-top: 10px;
+  }
+
+  header #marca h1 {
+    margin-bottom: 10px;
+  }
+
+  #mostrar-caso h1 {
+    font-size: 36px;
+    /* Adjusted mostrar-caso title size for smaller screens */
+  }
+
+  #cajas {
+    flex-direction: column;
+    /* Stack cajas vertically on smaller screens */
+  }
+
+  #cajas .caja {
+    width: 90%;
+    /* Cajas take full width on smaller screens */
+    margin: auto;
+    /* Center cajas on smaller screens */
+    float: none;
+  }
+
+  #contacto form {
+    width: 95%;
+    /* Adjusted contact form width for smaller screens */
+  }
+
+  .seccion h2 {
+    font-size: 2em;
+    /* Adjusted section title size for smaller screens */
+  }
+
+  #mostrar-caso p, .seccion p {
+    font-size: 16px;
+    /* Adjusted paragraph size for smaller screens */
+  }
+
+  #galeria img {
+    width: 95%;
+    /* Gallery images take full width on smaller screens */
+    margin-left: auto;
+    margin-right: auto;
   }
 }
